@@ -153,7 +153,6 @@ function RicksMLC_ShowIsoRegionsWindow.Init()
 
     local settings = ModOptions:getInstance(RicksMLC_ShowIsoRegionsWindow.modOptionsSettings)
 
-    RicksMLC_ShowIsoRegionsWindow.settings.ShowMoodle = settings:getData("ShowMoodle");
     RicksMLC_ShowIsoRegionsWindow.settings.ShowMenuItem = settings:getData("ShowMenuItem")
 
     Events.EveryOneMinute.Add(RicksMLC_ShowIsoRegionsWindow.OnEveryOneMinute)
@@ -226,9 +225,8 @@ function RicksMLC_ShowIsoRegionsWindow.CutDownNonDebug_onMapRightMouseUp(self, x
         if not isClient() then
             local option = subMenu:addOption("Recalc player surrounding chunks", self.parent, IsoRegionsWindow.onRecalcChunks);
         end
-        -- FIXME: Should this be removed or included - Seek advice from 
-        -- local option = subMenu:addOption("Open logs", self.parent, IsoRegionsWindow.onOpenLogs);
-        -- context:addSubMenu(subMenuOption, subMenu)
+        local option = subMenu:addOption("Open logs", self.parent, IsoRegionsWindow.onOpenLogs);
+        context:addSubMenu(subMenuOption, subMenu)
     end
     return true
 end
