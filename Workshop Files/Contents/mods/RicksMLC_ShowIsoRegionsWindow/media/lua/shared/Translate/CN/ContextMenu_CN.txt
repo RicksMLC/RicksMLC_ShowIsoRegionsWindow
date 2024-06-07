@@ -1,0 +1,11 @@
+-- Rick's MLC IsoRegionWindow Mod
+
+ContextMenu_CN {
+	ContextMenu_RicksMLCIsoRegionsDebug = "IsoRegions 调试",
+
+	ContextMenu_RicksMLCShowIsoRegionWindow = "显示 IsoRegions 调试窗口",
+	ContextMenu_RicksMLCShowIsoRegionWindow_tooltip = "在非调试模式下，IsoRegions 调试窗口将没有任何传送/编辑选项。 当前 IsoRegion 封闭：",
+
+	ContextMenu_RicksMLCToggleIsEnclosedMoodle = "切换“已封闭”的 Moodle",
+	ContextMenu_RicksMLCToggleIsEnclosedMoodle_tooltip = "“被封闭”的情绪显示玩家所在位置的即时封闭状态。",
+},

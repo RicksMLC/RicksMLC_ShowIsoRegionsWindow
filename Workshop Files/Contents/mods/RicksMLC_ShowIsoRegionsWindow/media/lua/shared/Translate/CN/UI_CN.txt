@@ -1,0 +1,8 @@
+-- Rick's MLC Template
+-- Encoding Chinese Simplified - UTF-8
+-- ModOptions prompts:
+
+UI_CN {
+	UI_RicksMLCShowIsoRegionsWindow_Options_ShowMenuItem = "显示菜单项",
+	UI_RicksMLCShowIsoRegionsWindow_Options_ShowMenuItem_ToolTip = "在世界中右键单击时显示 IsoRegionsWindow 菜单项",
+},

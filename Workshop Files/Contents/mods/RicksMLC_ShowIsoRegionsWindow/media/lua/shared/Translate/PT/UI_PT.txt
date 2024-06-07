@@ -1,0 +1,8 @@
+-- Rick's MLC Concussion
+-- Encoding: ANSI
+-- ModOptions prompts:
+
+UI_PT {
+	UI_RicksMLCShowIsoRegionsWindow_Options_ShowMenuItem = "Mostrar item de menu",
+	UI_RicksMLCShowIsoRegionsWindow_Options_ShowMenuItem_ToolTip = "Mostrar o item de menu IsoRegionsWindow clicando com o botão direito do mouse no mundo",
+},

@@ -1,0 +1,11 @@
+-- Rick's MLC IsoRegionWindow Mod
+
+ContextMenu_EN {
+	ContextMenu_RicksMLCIsoRegionsDebug = "IsoRegions Debug",
+
+	ContextMenu_RicksMLCShowIsoRegionWindow = "Show IsoRegions Debug Window",
+	ContextMenu_RicksMLCShowIsoRegionWindow_tooltip = "The IsoRegions Debug Window will not have any Teleport/Edit options in non-debug mode.  Current IsoRegion Enclosed: ",
+
+	ContextMenu_RicksMLCToggleIsEnclosedMoodle = "Toggle 'Is Enclosed' Moodle",
+	ContextMenu_RicksMLCToggleIsEnclosedMoodle_tooltip = "The 'Is Enclosed' moodle shows the immediate Enclosed status of the player's location.",
+},

@@ -1,0 +1,10 @@
+-- Rick's MLC Template
+-- Encoding Chinese Simplified - UTF-8
+
+Moodles_CN {
+    Moodles_RicksMLC_Enclosed_Bad_lvl1 = "未附上",
+    Moodles_RicksMLC_Enclosed_Bad_desc_lvl1 = "此 IsoRegion 未封闭。 僵尸将在该地区生成",
+
+    Moodles_RicksMLC_Enclosed_Good_lvl1 = "封闭",
+    Moodles_RicksMLC_Enclosed_Good_desc_lvl1 = "这个isoRegion是封闭的，所以这里不应该有僵尸生成",
+},

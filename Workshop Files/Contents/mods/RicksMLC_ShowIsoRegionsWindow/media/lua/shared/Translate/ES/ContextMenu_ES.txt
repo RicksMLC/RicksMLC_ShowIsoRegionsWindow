@@ -1,0 +1,12 @@
+-- Rick's MLC IsoRegionWindow Mod
+-- Encoding: ANSI
+
+ContextMenu_ES {
+	ContextMenu_RicksMLCIsoRegionsDebug = "Depuración de IsoRegions",
+
+	ContextMenu_RicksMLCShowIsoRegionWindow = "Mostrar ventana de depuración de IsoRegions",
+	ContextMenu_RicksMLCShowIsoRegionWindow_tooltip = "La ventana de depuración de IsoRegions no tendrá ninguna opción de teletransporte/edición en el modo que no sea de depuración.  Isorregión actual incluida: ",
+
+	ContextMenu_RicksMLCToggleIsEnclosedMoodle = "Alternar 'Está encerrado' Moodle",
+	ContextMenu_RicksMLCToggleIsEnclosedMoodle_tooltip = "El moodle 'Está Cerrado' muestra el estado inmediato de Cerrado de la ubicación del jugador.",
+},
