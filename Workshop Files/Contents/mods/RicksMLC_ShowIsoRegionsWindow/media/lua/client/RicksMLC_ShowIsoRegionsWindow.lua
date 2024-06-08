@@ -90,7 +90,7 @@ function RicksMLC_ShowIsoRegionsWindow.DoContextMenu(player, context, worldobjec
         option.iconTexture = getTexture("media/ui/RicksMLC_Enclosed-Menu-Red.png")
     end
 
-    local subMenuOption = context:addOptionOnTop("IsoRegions Debug", nil, nil)
+    local subMenuOption = context:addOption("IsoRegions Debug", nil, nil)
     context:addSubMenu(subMenuOption, subMenu)
 end
 
