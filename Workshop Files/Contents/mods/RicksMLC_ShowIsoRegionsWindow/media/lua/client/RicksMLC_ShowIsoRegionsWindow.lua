@@ -220,13 +220,7 @@ function RicksMLC_ShowIsoRegionsWindow.CutDownNonDebug_onMapRightMouseUp(self, x
         local subMenuOption = context:addOption("Display", nil, nil)
         context:addSubMenu(subMenuOption, subMenu)
 
-        local subMenu = context:getNew(context)
-        local subMenuOption = context:addOption("Other", nil, nil)
-        if not isClient() then
-            local option = subMenu:addOption("Recalc player surrounding chunks", self.parent, IsoRegionsWindow.onRecalcChunks);
-        end
-        local option = subMenu:addOption("Open logs", self.parent, IsoRegionsWindow.onOpenLogs);
-        context:addSubMenu(subMenuOption, subMenu)
+        -- Removed the "Other" menu as the actions do not work in non-debug mode.
     end
     return true
 end
