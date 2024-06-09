@@ -1,5 +1,5 @@
 -- Rick's MLC Template
--- Encoding Chinese Simplified - UTF-8
+-- Encoding Chinese Simplified: UTF-8
 -- ModOptions prompts:
 
 UI_CN {

@@ -1,5 +1,5 @@
 -- Rick's MLC Template
--- Encoding Chinese Simplified - UTF-8
+-- Encoding Chinese Simplified: UTF-8
 
 Moodles_CN {
     Moodles_RicksMLC_Enclosed_Bad_lvl1 = "未附上",

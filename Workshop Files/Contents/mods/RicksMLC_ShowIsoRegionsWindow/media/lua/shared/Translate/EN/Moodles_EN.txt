@@ -1,5 +1,5 @@
--- IGUI_RicksMLC_ShowIsoRegionsWindow
--- Moodles
+-- Rick's MLC Show IsoRegionsWindow
+-- Encoding: UTF-8
 
 Moodles_EN {
     Moodles_RicksMLC_Enclosed_Bad_lvl1 = "Not Enclosed",

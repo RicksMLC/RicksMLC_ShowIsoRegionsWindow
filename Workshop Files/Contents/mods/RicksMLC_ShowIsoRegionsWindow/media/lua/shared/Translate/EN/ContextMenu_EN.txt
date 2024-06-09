@@ -1,4 +1,5 @@
--- Rick's MLC IsoRegionWindow Mod
+-- Rick's MLC Show IsoRegionsWindow
+-- Encoding: UTF-8
 
 ContextMenu_EN {
 	ContextMenu_RicksMLCIsoRegionsDebug = "IsoRegions Debug",

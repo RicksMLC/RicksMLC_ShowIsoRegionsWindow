@@ -1,0 +1,15 @@
+-- Rick's MLC Show IsoRegionsWindow
+-- Encoding: UTF-8
+
+Sandbox_EN = {
+    Sandbox_RicksMLC_ShowIsoRegionsWindow = "Rick's MLC Show IsoRegionsWindow",
+
+    Sandbox_RicksMLC_ShowIsoRegionsWindow_AllowShowWindow = "Allow debug window",
+    Sandbox_RicksMLC_ShowIsoRegionsWindow_AllowShowWindow_tooltip = "Allow the menu option to open the IsoRegions window.  If this is set to false, the menu will only have the Toggle Moodle option.",
+
+    Sandbox_RicksMLC_ShowIsoRegionsWindow_AllowAdminShowWindow = "Allow Admin debug window", 
+    Sandbox_RicksMLC_ShowIsoRegionsWindow_AllowAdminShowWindow_tooltip = "(Multiplayer only) Allow the Admin user to show the IsoRegions Window, even if the 'Allow debug window' is off",
+
+    Sandbox_RicksMLC_ShowIsoRegionsWindow_AllowObserverShowWindow = "Allow Observer+ debug window", 
+    Sandbox_RicksMLC_ShowIsoRegionsWindow_AllowObserverShowWindow_tooltip = "(Multiplayer only) Allow the Observer and above users to show the IsoRegions Window, even if the 'Allow debug window' is off",
+}

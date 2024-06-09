@@ -1,0 +1,16 @@
+-- Rick's MLC Show IsoRegionsWindow
+-- Encoding Chinese Simplified - UTF-8
+
+Sandbox_CN = {
+    Sandbox_RicksMLC_ShowIsoRegionsWindow = "Rick 的 MLC 显示 IsoRegionsWindow",
+
+    Sandbox_RicksMLC_ShowIsoRegionsWindow_AllowShowWindow = "允许调试窗口",
+    Sandbox_RicksMLC_ShowIsoRegionsWindow_AllowShowWindow_tooltip = "允许菜单选项打开“IsoRegions”（IsoRegions） 窗口。 如果设置为 false，则菜单将仅具有 Toggle Moodle 选项。",
+	
+    Sandbox_RicksMLC_ShowIsoRegionsWindow_AllowAdminShowWindow = "“允许管理员调试”窗口", 
+    Sandbox_RicksMLC_ShowIsoRegionsWindow_AllowAdminShowWindow_tooltip = "（仅限多人游戏）允许管理员用户显示 IsoRegions 窗口，即使“允许调试窗口”处于关闭状态",
+	
+    Sandbox_RicksMLC_ShowIsoRegionsWindow_AllowObserverShowWindow = "允许 Observer+ 调试窗口", 
+    Sandbox_RicksMLC_ShowIsoRegionsWindow_AllowObserverShowWindow_tooltip = "（仅限多人游戏）允许 Observer 及以上用户显示 IsoRegions 窗口，即使“允许调试窗口”处于关闭状态",
+
+}

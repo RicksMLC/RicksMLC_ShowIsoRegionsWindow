@@ -1,4 +1,5 @@
 -- Rick's MLC IsoRegionWindow Mod
+-- Encoding Chinese Simplified: UTF-8
 
 ContextMenu_CN {
 	ContextMenu_RicksMLCIsoRegionsDebug = "IsoRegions 调试",

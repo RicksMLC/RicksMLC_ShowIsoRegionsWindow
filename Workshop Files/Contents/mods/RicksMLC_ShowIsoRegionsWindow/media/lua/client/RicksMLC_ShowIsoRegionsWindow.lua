@@ -15,6 +15,9 @@
 --  [+] Moodles display the Enclosed/Not Enclosed status. (requires MoodleFramework)
 --  [+] New menu option shows the player location Enclosed status.
 --  [+] Moodle compatible with the "Moodle Quarters" mod
+--  [+] The IsoRegions window menu option (ie: all functionalty) can be disabled in modoptions if the user does not wish to see it.
+--  [+] The IsoRegions window menu option can be removed using the Sandbox setting "Allow debug window".  The "Is Enabled" moodle toggle is still available.
+--  [+] (MP) The IsoRegions window menu option can be visible to Admin only via the sandbox setting "Allow Admin debug window"
 --
 -- Provides ability to show the IsoRegions Debug Window when running non-debug sessions of Project Zomboid.
 -- The IsoRegionsWindow shows the known bounaries (eg walls) of each region and chunk on the map.  
@@ -70,17 +73,8 @@ function RicksMLC_ShowIsoRegionsWindow.ToggleMoodle()
     RicksMLC_ShowIsoRegionsWindow.RefreshShowMoodleState()
 end
 
-function RicksMLC_ShowIsoRegionsWindow.DoContextMenu(player, context, worldobjects, test)
-    if not RicksMLC_ShowIsoRegionsWindow.settings.ShowMenuItem then return end
-
-    local subMenu = context:getNew(context)
-    local option = subMenu:addOption(getText("ContextMenu_RicksMLCShowIsoRegionWindow"), worldobjects, function() IsoRegionsWindow.OnOpenPanel() end, player) -- "Show IsoRegions Debug Window"
-    local tooltip = ISWorldObjectContextMenu:addToolTip()
-    local playerObj = getSpecificPlayer(player)
-    tooltip.description = getText("ContextMenu_RicksMLCShowIsoRegionWindow_tooltip") .. tostring(RicksMLC_ShowIsoRegionsWindow.GetEnclosedStatus(playerObj))
-    option.toolTip = tooltip
-
-    local option = subMenu:addOption(getText("ContextMenu_RicksMLCToggleIsEnclosedMoodle"), worldObjects, RicksMLC_ShowIsoRegionsWindow.ToggleMoodle) -- Toggle Moodle
+function RicksMLC_ShowIsoRegionsWindow.CreateMoodleToggleMenuItem(optionOwner, worldObjects, playerObj)
+    local option = optionOwner:addOption(getText("ContextMenu_RicksMLCToggleIsEnclosedMoodle"), worldObjects, RicksMLC_ShowIsoRegionsWindow.ToggleMoodle) -- Toggle Moodle
     local tooltip = ISWorldObjectContextMenu:addToolTip()
     tooltip.description = getText("ContextMenu_RicksMLCToggleIsEnclosedMoodle_tooltip")
     option.toolTip = tooltip
@@ -89,9 +83,39 @@ function RicksMLC_ShowIsoRegionsWindow.DoContextMenu(player, context, worldobjec
     else
         option.iconTexture = getTexture("media/ui/RicksMLC_Enclosed-Menu-Red.png")
     end
+    return option
+end
 
-    local subMenuOption = context:addOption("IsoRegions Debug", nil, nil)
-    context:addSubMenu(subMenuOption, subMenu)
+function RicksMLC_ShowIsoRegionsWindow.IsShowWindowPermitted() 
+    return  SandboxVars.RicksMLC_ShowIsoRegionsWindow.AllowShowWindow 
+            or (isClient() and (   (SandboxVars.RicksMLC_ShowIsoRegionsWindow.AllowAdminShowWindow and isAdmin())
+                                or (SandboxVars.RicksMLC_ShowIsoRegionsWindow.AllowObserverShowWindow and (   isAccessLevel("observer")
+                                                                                                           or isAccessLevel("gm") 
+                                                                                                           or isAccessLevel("moderator"))
+                                   )
+                               )
+                )
+end
+
+function RicksMLC_ShowIsoRegionsWindow.DoContextMenu(player, context, worldobjects, test)
+    if not RicksMLC_ShowIsoRegionsWindow.settings.ShowMenuItem then return end
+
+    local playerObj = getSpecificPlayer(player)
+    if RicksMLC_ShowIsoRegionsWindow.IsShowWindowPermitted() then
+
+        local subMenu = context:getNew(context)
+        local option = subMenu:addOption(getText("ContextMenu_RicksMLCShowIsoRegionWindow"), worldobjects, function() IsoRegionsWindow.OnOpenPanel() end, player) -- "Show IsoRegions Debug Window"
+        local tooltip = ISWorldObjectContextMenu:addToolTip()
+        tooltip.description = getText("ContextMenu_RicksMLCShowIsoRegionWindow_tooltip") .. tostring(RicksMLC_ShowIsoRegionsWindow.GetEnclosedStatus(playerObj))
+        option.toolTip = tooltip
+
+        local moodleToggleMenuItem = RicksMLC_ShowIsoRegionsWindow.CreateMoodleToggleMenuItem(subMenu, worldObjects, playerObj)
+
+        local subMenuOption = context:addOption("IsoRegions Debug", nil, nil)
+        context:addSubMenu(subMenuOption, subMenu)
+    else
+        local moodleToggleMenuItem = RicksMLC_ShowIsoRegionsWindow.CreateMoodleToggleMenuItem(context, worldObjects, playerObj)
+    end
 end
 
 function RicksMLC_ShowIsoRegionsWindow.TurnOnMoodle()

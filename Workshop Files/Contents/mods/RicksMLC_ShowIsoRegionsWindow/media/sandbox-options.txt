@@ -1,0 +1,25 @@
+VERSION = 1,
+
+option RicksMLC_ShowIsoRegionsWindow.AllowShowWindow
+{
+	type = boolean,
+	default = true,
+	page = RicksMLC_ShowIsoRegionsWindow,
+	translation = RicksMLC_ShowIsoRegionsWindow_AllowShowWindow,
+}
+
+option RicksMLC_ShowIsoRegionsWindow.AllowAdminShowWindow
+{
+	type = boolean,
+	default = true,
+	page = RicksMLC_ShowIsoRegionsWindow,
+	translation = RicksMLC_ShowIsoRegionsWindow_AllowAdminShowWindow,
+}
+
+option RicksMLC_ShowIsoRegionsWindow.AllowObserverShowWindow
+{
+	type = boolean,
+	default = true,
+	page = RicksMLC_ShowIsoRegionsWindow,
+	translation = RicksMLC_ShowIsoRegionsWindow_AllowObserverShowWindow,
+}
