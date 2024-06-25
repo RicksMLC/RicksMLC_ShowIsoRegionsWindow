@@ -71,6 +71,7 @@ end
 function RicksMLC_ShowIsoRegionsWindow.ToggleMoodle()
     RicksMLC_ShowIsoRegionsWindow.settings.ShowMoodle = not RicksMLC_ShowIsoRegionsWindow.settings.ShowMoodle
     RicksMLC_ShowIsoRegionsWindow.RefreshShowMoodleState()
+    getGameTime():getModData()["RicksMLC_ShowIsoRegionsWindow"].ShowMoodleAtStart = RicksMLC_ShowIsoRegionsWindow.settings.ShowMoodle
 end
 
 function RicksMLC_ShowIsoRegionsWindow.CreateMoodleToggleMenuItem(optionOwner, worldObjects, playerObj)
@@ -111,7 +112,7 @@ function RicksMLC_ShowIsoRegionsWindow.DoContextMenu(player, context, worldobjec
 
         local moodleToggleMenuItem = RicksMLC_ShowIsoRegionsWindow.CreateMoodleToggleMenuItem(subMenu, worldObjects, playerObj)
 
-        local subMenuOption = context:addOption("IsoRegions Debug", nil, nil)
+        local subMenuOption = context:addOption("ContextMenu_RicksMLCIsoRegionsDebug", nil, nil)
         context:addSubMenu(subMenuOption, subMenu)
     else
         local moodleToggleMenuItem = RicksMLC_ShowIsoRegionsWindow.CreateMoodleToggleMenuItem(context, worldObjects, playerObj)
@@ -178,6 +179,13 @@ function RicksMLC_ShowIsoRegionsWindow.Init()
     local settings = ModOptions:getInstance(RicksMLC_ShowIsoRegionsWindow.modOptionsSettings)
 
     RicksMLC_ShowIsoRegionsWindow.settings.ShowMenuItem = settings:getData("ShowMenuItem")
+
+    local modData = getGameTime():getModData()["RicksMLC_ShowIsoRegionsWindow"]
+    if not modData then
+        getGameTime():getModData()["RicksMLC_ShowIsoRegionsWindow"] = {ShowMoodleAtStart = RicksMLC_ShowIsoRegionsWindow.settings.ShowMoodle}
+    else
+        RicksMLC_ShowIsoRegionsWindow.settings.ShowMoodle = modData.ShowMoodleAtStart
+    end
 
     Events.EveryOneMinute.Add(RicksMLC_ShowIsoRegionsWindow.OnEveryOneMinute)
 end

@@ -2,15 +2,15 @@
 -- Encoding Chinese Simplified - UTF-8
 
 Sandbox_CN = {
-    Sandbox_RicksMLC_ShowIsoRegionsWindow = "Rick 的 MLC 显示 IsoRegionsWindow",
-
-    Sandbox_RicksMLC_ShowIsoRegionsWindow_AllowShowWindow = "允许调试窗口",
-    Sandbox_RicksMLC_ShowIsoRegionsWindow_AllowShowWindow_tooltip = "允许菜单选项打开“IsoRegions”（IsoRegions） 窗口。 如果设置为 false，则菜单将仅具有 Toggle Moodle 选项。",
+    --Sandbox_RicksMLC_ShowIsoRegionsWindow = "查看Iso区域|Show IsoRegionsWindow",
+	Sandbox_RicksMLC_ShowIsoRegionsWindow = "Rick 的 MLC 显示 IsoRegionsWindow",
 	
-    Sandbox_RicksMLC_ShowIsoRegionsWindow_AllowAdminShowWindow = "“允许管理员调试”窗口", 
-    Sandbox_RicksMLC_ShowIsoRegionsWindow_AllowAdminShowWindow_tooltip = "（仅限多人游戏）允许管理员用户显示 IsoRegions 窗口，即使“允许调试窗口”处于关闭状态",
+	Sandbox_RicksMLC_ShowIsoRegionsWindow_AllowShowWindow = "允许显示调试窗口",
+	Sandbox_RicksMLC_ShowIsoRegionsWindow_AllowShowWindow_tooltip = "允许打开IsoRegions窗口的菜单选项如果关闭则菜单将只有切换心情选项",
 	
-    Sandbox_RicksMLC_ShowIsoRegionsWindow_AllowObserverShowWindow = "允许 Observer+ 调试窗口", 
-    Sandbox_RicksMLC_ShowIsoRegionsWindow_AllowObserverShowWindow_tooltip = "（仅限多人游戏）允许 Observer 及以上用户显示 IsoRegions 窗口，即使“允许调试窗口”处于关闭状态",
-
+	Sandbox_RicksMLC_ShowIsoRegionsWindow_AllowAdminShowWindow = "允许管理员显示调试窗口",
+	Sandbox_RicksMLC_ShowIsoRegionsWindow_AllowAdminShowWindow_tooltip = "（仅限多人游戏）即使“允许显示调试窗口”关闭,也允许管理员用户显示IsoRegions窗口",
+	
+	Sandbox_RicksMLC_ShowIsoRegionsWindow_AllowObserverShowWindow = "允许Observer+显示调试窗口",
+	Sandbox_RicksMLC_ShowIsoRegionsWindow_AllowObserverShowWindow_tooltip = "（仅限多人游戏）即使“允许显示调试窗口”关闭,也允许Observer及以上用户显示IsoRegions窗口",
 }
