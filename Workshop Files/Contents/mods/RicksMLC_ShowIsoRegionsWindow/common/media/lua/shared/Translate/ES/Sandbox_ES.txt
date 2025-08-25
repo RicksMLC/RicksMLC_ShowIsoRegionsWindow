@@ -1,0 +1,17 @@
+-- Rick's MLC Show IsoRegionsWindow
+-- Encoding: ANSI
+
+Sandbox_ES = {
+    Sandbox_RicksMLC_ShowIsoRegionsWindow = "Rick's MLC Show IsoRegionsWindow",
+
+    Sandbox_RicksMLC_ShowIsoRegionsWindow_AllowShowWindow = "Permitir ventana de depuración",
+    Sandbox_RicksMLC_ShowIsoRegionsWindow_AllowShowWindow_tooltip = "Permita que la opción de menú abra la ventana IsoRegiones.  Si esto se establece en false, el menú solo tendrá la opción Alternar Moodle.",
+	
+	Sandbox_RicksMLC_ShowIsoRegionsWindow_AllowAdminShowWindow = "Permitir la ventana de depuración del administrador", 
+    Sandbox_RicksMLC_ShowIsoRegionsWindow_AllowAdminShowWindow_tooltip = "(Solo multijugador) Permitir que el usuario administrador muestre la ventana de IsoRegions, incluso si la opción 'Permitir ventana de depuración' está desactivada",
+	
+    Sandbox_RicksMLC_ShowIsoRegionsWindow_AllowObserverShowWindow = "Permitir la ventana de depuración de Observer+", 
+    Sandbox_RicksMLC_ShowIsoRegionsWindow_AllowObserverShowWindow_tooltip = "(Solo multijugador) Permitir que los usuarios de Observer y superiores muestren la ventana IsoRegions, incluso si la opción "Permitir ventana de depuración" está desactivada",
+
+
+}

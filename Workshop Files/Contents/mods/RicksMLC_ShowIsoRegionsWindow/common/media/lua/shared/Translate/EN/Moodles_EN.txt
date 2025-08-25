@@ -1,0 +1,10 @@
+-- Rick's MLC Show IsoRegionsWindow
+-- Encoding: UTF-8
+
+Moodles_EN {
+    Moodles_RicksMLC_Enclosed_Bad_lvl1 = "Not Enclosed",
+    Moodles_RicksMLC_Enclosed_Bad_desc_lvl1 = "This IsoRegion is Not Enclosed.  Zombies will spawn in this region",
+
+    Moodles_RicksMLC_Enclosed_Good_lvl1 = "Enclosed",
+    Moodles_RicksMLC_Enclosed_Good_desc_lvl1 = "This isoRegion is enclosed, so no zombies should spawn here",
+}

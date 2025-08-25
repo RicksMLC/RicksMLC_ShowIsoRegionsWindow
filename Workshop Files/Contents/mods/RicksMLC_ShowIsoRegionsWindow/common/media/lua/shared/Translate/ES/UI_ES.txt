@@ -1,0 +1,8 @@
+-- Rick's MLC Show IsoRegionsWindow
+-- Encoding: ANSI
+-- ModOptions prompts:
+
+UI_ES {
+	UI_RicksMLCShowIsoRegionsWindow_Options_ShowMenuItem = "Mostrar elemento de menú",
+	UI_RicksMLCShowIsoRegionsWindow_Options_ShowMenuItem_ToolTip = "Mostrar el elemento de menú IsoRegionsWindow al hacer clic con el botón derecho en el mundo",
+},

@@ -1,0 +1,12 @@
+-- Rick's MLC IsoRegionWindow Mod
+-- Encoding Chinese Simplified: UTF-8
+
+ContextMenu_CN {
+	ContextMenu_RicksMLCIsoRegionsDebug = "Iso区域调试",
+
+	ContextMenu_RicksMLCShowIsoRegionWindow = "显示Iso区域调试窗口",
+	ContextMenu_RicksMLCShowIsoRegionWindow_tooltip = "在非调试模式(-Debug)下,窗口不具备传送或编辑功能，当前Iso区域是否封闭：",
+
+	ContextMenu_RicksMLCToggleIsEnclosedMoodle = "切换封闭状态指示器",
+	ContextMenu_RicksMLCToggleIsEnclosedMoodle_tooltip = "人物状态指示器即时显示玩家所在房间是否封闭(判定为室内)",
+},

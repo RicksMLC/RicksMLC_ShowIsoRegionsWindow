@@ -1,0 +1,8 @@
+-- Rick's MLC Template
+-- Encoding Chinese Simplified: UTF-8
+-- ModOptions prompts:
+
+UI_CN {
+	UI_RicksMLCShowIsoRegionsWindow_Options_ShowMenuItem = "显示右键菜单",
+	UI_RicksMLCShowIsoRegionsWindow_Options_ShowMenuItem_ToolTip = "在右键上下文菜单中显示Iso区域调试",
+},

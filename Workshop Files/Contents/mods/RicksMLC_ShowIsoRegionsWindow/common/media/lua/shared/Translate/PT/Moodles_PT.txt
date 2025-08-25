@@ -1,0 +1,11 @@
+-- IGUI_RicksMLC_ShowIsoRegionsWindow
+-- Encoding: ANSI
+-- Moodles
+
+Moodles_PT {
+    Moodles_RicksMLC_Enclosed_Bad_lvl1 = "Não fechado",
+    Moodles_RicksMLC_Enclosed_Bad_desc_lvl1 = "Esta IsoRegion não está incluída.  Zumbis vão desovar nesta região",
+
+    Moodles_RicksMLC_Enclosed_Good_lvl1 = "Em anexo",
+    Moodles_RicksMLC_Enclosed_Good_desc_lvl1 = "Esta isoRegião é fechada, então nenhum zumbi deve desovar aqui",
+}

@@ -1,0 +1,10 @@
+-- Rick's MLC Template
+-- Encoding Chinese Simplified: UTF-8
+
+Moodles_CN {
+    Moodles_RicksMLC_Enclosed_Bad_lvl1 = "未封闭",
+	Moodles_RicksMLC_Enclosed_Bad_desc_lvl1 = "未封闭,丧尸可能在此区域生成",
+	
+	Moodles_RicksMLC_Enclosed_Good_lvl1 = "已封闭",
+	Moodles_RicksMLC_Enclosed_Good_desc_lvl1 = "已封闭，因此丧尸不应该生成在此区域",
+},
