@@ -61,7 +61,8 @@ if MF then
     MF.createMoodle(RicksMLC_EnclosedMoodle)
 end
 
-function RicksMLC_ShowIsoRegionsWindow.GetEnclosedStatus(plr)
+function RicksMLC_ShowIsoRegionsWindow.IsEnclosedStatus(plr)
+    if plr:getZ() < 0 then return nil end
     local plrX = plr:getX()
     local plrY = plr:getY()
     local plrZ = math.floor(plr:getZ())
@@ -79,7 +80,12 @@ function RicksMLC_ShowIsoRegionsWindow.SetMoodleValue(value)
 end
 
 function RicksMLC_ShowIsoRegionsWindow.UpdateEnclosedMoodle()
-    if RicksMLC_ShowIsoRegionsWindow.GetEnclosedStatus(getPlayer()) then
+    local isEnclosed = RicksMLC_ShowIsoRegionsWindow.IsEnclosedStatus(getPlayer())
+    if isEnclosed == nil then
+        RicksMLC_ShowIsoRegionsWindow.SetMoodleValue(0.5) -- neutral value
+        return
+    end
+    if isEnclosed then
         RicksMLC_ShowIsoRegionsWindow.SetMoodleValue(0.6) -- float 0.6 is default good level 1
         return
     end
@@ -111,7 +117,12 @@ function RicksMLC_ShowIsoRegionsWindow.CreateMoodleToggleMenuItem(optionOwner, w
     local tooltip = ISWorldObjectContextMenu:addToolTip()
     tooltip.description = getText("ContextMenu_RicksMLCToggleIsEnclosedMoodle_tooltip")
     option.toolTip = tooltip
-    if RicksMLC_ShowIsoRegionsWindow.GetEnclosedStatus(playerObj) then
+    local isEnclosed = RicksMLC_ShowIsoRegionsWindow.IsEnclosedStatus(playerObj)
+    if isEnclosed == nil then
+        option.iconTexture = getTexture("media/ui/RicksMLC_Enclosed-Underground.png")
+        return option
+    end
+    if isEnclosed then
         option.iconTexture = getTexture("media/ui/RicksMLC_Enclosed-Menu-Green.png")
     else
         option.iconTexture = getTexture("media/ui/RicksMLC_Enclosed-Menu-Red.png")
@@ -139,7 +150,7 @@ function RicksMLC_ShowIsoRegionsWindow.DoContextMenu(player, context, worldobjec
         local subMenu = context:getNew(context)
         local option = subMenu:addOption(getText("ContextMenu_RicksMLCShowIsoRegionWindow"), worldobjects, function() IsoRegionsWindow.OnOpenPanel() end, player) -- "Show IsoRegions Debug Window"
         local tooltip = ISWorldObjectContextMenu:addToolTip()
-        tooltip.description = getText("ContextMenu_RicksMLCShowIsoRegionWindow_tooltip") .. tostring(RicksMLC_ShowIsoRegionsWindow.GetEnclosedStatus(playerObj))
+        tooltip.description = getText("ContextMenu_RicksMLCShowIsoRegionWindow_tooltip") .. tostring(RicksMLC_ShowIsoRegionsWindow.IsEnclosedStatus(playerObj))
         option.toolTip = tooltip
 
         local moodleToggleMenuItem = RicksMLC_ShowIsoRegionsWindow.CreateMoodleToggleMenuItem(subMenu, worldObjects, playerObj)
